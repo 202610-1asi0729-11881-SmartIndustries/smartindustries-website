@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Soluciones Digitales</title>
+        <link rel="stylesheet">
+        <link rel="stylesheet" href="css/tech_styles.css">
+    </head>
+    <body>
+        
+        <header class="main-header">
+            <h2 class="logo"><a href="#">TechNova</a></h2>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#vision">Visión</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#portafolio">Portafolio</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+        </header>
+
+        <section id="inicio" class="hero-section" style="background-image: url(img/tech_hero.jpeg);">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Transformando Ideas en Código</h1>
+                <h3>Desarrollo de Software ágil y soluciones en la nube.</h3>
+                <a href="#contacto" class="btn primary-btn">Inicia tu Proyecto</a>
+            </div>
+        </section>
+
+        <section id="vision" class="content-section vision-section">
+            <h2 class="section-title">Nuestra Visión Tecnológica</h2>
+            <p class="description">Estamos comprometidos con la innovación continua, utilizando las últimas herramientas para ofrecer productos escalables y de alto rendimiento.</p>
+            
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <i class="fas fa-code fa-3x"></i>
+                    <h4>Desarrollo Backend</h4>
+                    <p>Sistemas robustos con NodeJS y Python.</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-mobile-alt fa-3x"></i>
+                    <h4>Apps Móviles</h4>
+                    <p>Experiencias nativas y multiplataforma.</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-cloud fa-3x"></i>
+                    <h4>Arquitectura Cloud</h4>
+                    <p>Soluciones optimizadas en AWS y Azure.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicios" class="content-section services-section">
+            <h2 class="section-title">Servicios que Ofrecemos</h2>
+            <p class="description">Desde el diseño conceptual hasta el despliegue final, cubrimos todas las fases del ciclo de vida del software.</p>
+            
+            <div class="service-cards">
+                <div class="service-card">
+                    <img src="img/service_web.jpeg">
+                    <h3>Desarrollo Web (Full Stack)</h3>
+                    <p>Creación de sitios y aplicaciones web dinámicas con React y Vue.</p>
+                </div>
+                <div class="service-card">
+                    <img src="./img/service_ia.jpg">
+                    <h3>Integración de I.A.</h3>
+                    <p>Implementación de modelos de Machine Learning y automatización.</p>
+                </div>
+                <div class="service-card">
+                    <img src="img/service_security.jpg">
+                    <h3>Consultoría de Seguridad</h3>
+                    <p>Auditorías de código y protección contra vulnerabilidades.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="portafolio" class="content-section portfolio-section">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            
+            <div class="project-grid">
+                <div class="project-item" style="background-image: url(./img/project_dashboard.jpeg);">
+                    <div class="project-info">
+                        <h4>Plataforma Analítica</h4>
+                        <p>Dashboard de visualización de datos en tiempo real.</p>
+                    </div>
+                </div>
+                <div class="project-item" style="background-image: url(img/project_ecommerce.jpeg);">
+                    <div class="project-info">
+                        <h4>E-Commerce Escalable</h4>
+                        <p>Tienda virtual con integración de pagos y logística.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="content-section contact-section">
+            <h2 class="section-title">Hablemos de tu Proyecto</h2>
+            <p class="description">Envíanos tu consulta. Nos pondremos en contacto contigo en menos de 24 horas.</p>
+            
+            <div id="js-form-container" class="form-container">
+                </div>
+        </section>
+
+        <footer>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2025 TechNova. Soluciones Digitales.</p>
+        </footer>
+
+       <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const container = document.getElementById('js-form-container');
+
+                // 1. Crear el formulario y sus elementos
+                const form = document.createElement('form');
+                form.id = 'contact-form';
+                
+                // *** CAMBIO CLAVE: El campo de "Usuario" ahora es de tipo email ***
+                const emailInput = document.createElement('input');
+                emailInput.type = 'email'; // ⬅Tipo "email" para validación automática del navegador
+                emailInput.placeholder = 'Tu Correo Electrónico (Requerido)';
+                emailInput.id = 'user-email';
+                emailInput.required = true;
+
+                const messageInput = document.createElement('textarea');
+                messageInput.placeholder = 'Tu Mensaje o Consulta';
+                messageInput.id = 'user-message';
+                messageInput.required = true;
+
+                const submitButton = document.createElement('button');
+                submitButton.type = 'submit';
+                submitButton.className = 'btn primary-btn';
+                submitButton.textContent = 'Enviar Solicitud';
+
+                // 2. Ensamblar la estructura
+                form.appendChild(emailInput); // Añadimos el nuevo campo de email
+                form.appendChild(messageInput);
+                form.appendChild(submitButton);
+                container.appendChild(form);
+
+                // 3. Lógica del evento
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault(); // Detener el envío estándar del formulario
+                    
+                    const userEmail = emailInput.value; // Usamos el valor del email
+                    const userMessage = messageInput.value;
+
+                    if (userEmail && userMessage) {
+                        // El mensaje box ahora usa el Correo Electrónico ingresado
+                        alert(`¡Hola! ${userEmail} Tu solicitud ha sido aceptada. Te responderemos pronto.`);
+                        
+                        // Opcional: Limpiar el formulario
+                        form.reset();
+                    } else {
+                        alert('Por favor, completa todos los campos.');
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
