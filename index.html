@@ -10,7 +10,7 @@
     <nav class="navbar">
         <div class="logo">
             <img src="img/SmartLock-logo-transparent.png" alt="SmartLock Logo">
-            <b class="smartlock-name">SmartLock</b>
+            <b class="smartlock-name"></b>
         </div>
         <div class="nav-links">
             <a href="#features" data-i18n="nav-feat">Funcionalidades</a>
@@ -50,9 +50,8 @@
         </div>
     </header>
 
-    <script src="script.js"></script>
-
-     <section id="features" class="features">
+    
+    <section id="features" class="features">
         <div class="features-header">
             <span class="feat-label" data-i18n="feat-label">FUNCIONALIDADES</span>
             <h2 data-i18n="feat-title">Todo lo que necesitas para gestionar el acceso</h2>
@@ -65,7 +64,7 @@
             <div class="feat-card"><h3 data-i18n="card4-t">Multi-sede</h3><p data-i18n="card4-p">Gestiona accesos por zonas y sedes.</p></div>
         </div>
     </section>
-
+    
 
     <section id="how-it-works" class="how-works">
         <div class="how-header">
@@ -139,7 +138,7 @@
             <span class="pricing-label" data-i18n="price-label">PRECIOS</span>
             <h2 data-i18n="price-title">Planes que crecen contigo</h2>
         </div>
-       
+        
         <div class="pricing-grid">
             <div class="price-card">
                 <h3 data-i18n="p1-name">Básico</h3>
@@ -186,6 +185,59 @@
         </div>
     </section>
 
+    <section id="contact" class="contact">
+    <div class="contact-container">
+        <div class="contact-info">
+            <span class="contact-label" data-i18n="contact-label">CONTACTO</span>
+            <h2 data-i18n="contact-title">¿Listo para digitalizar tu seguridad?</h2>
+            <p data-i18n="contact-sub">Nuestro equipo técnico te ayudará a encontrar la mejor solución para tus instalaciones.</p>
+            <div class="contact-details">
+                <div class="detail-item"><strong>Email:</strong> sales@smarttecnologies.com</div>
+                <div class="detail-item"><strong>Tel:</strong> +51 999 888 777</div>
+            </div>
+        </div>
+        <form class="contact-form">
+            <div class="form-grid">
+                <input type="text" data-i18n-ph="ph-name" placeholder="Nombre">
+                <input type="text" data-i18n-ph="ph-lastname" placeholder="Apellido">
+                <input type="email" data-i18n-ph="ph-email" placeholder="Correo electrónico">
+                <input type="tel" data-i18n-ph="ph-phone" placeholder="Teléfono">
+                <input type="text" data-i18n-ph="ph-company" placeholder="Empresa" class="full-width">
+                <textarea data-i18n-ph="ph-msg" placeholder="¿En qué podemos ayudarte?" class="full-width"></textarea>
+            </div>
+            <button type="submit" class="btn-nav-blue" data-i18n="form-btn">Enviar mensaje</button>
+        </form>
+    </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="img/SmartLock-logo-transparent.png" alt="SmartLock Logo">
+                <p data-i18n="footer-slogan">Seguridad inteligente para un mundo conectado.</p>
+            </div>
+            <div class="footer-links">
+                <h4 data-i18n="footer-prod">Producto</h4>
+                <a href="#features" data-i18n="nav-feat">Funcionalidades</a>
+                <a href="#pricing" data-i18n="nav-price">Precios</a>
+            </div>
+            <div class="footer-links">
+                <h4 data-i18n="footer-legal">Legal</h4>
+                <a href="#" data-i18n="footer-privacy">Privacidad</a>
+                <a href="#" data-i18n="footer-terms">Términos</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SmartTecnologies. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="lang-btn-float" class="lang-float">
+        <span class="icon">🌐</span>
+        <span class="text">EN/ES</span>
+    </button>
+    
+    <script src="script.js"></script>
     
 </body>
 </html>
